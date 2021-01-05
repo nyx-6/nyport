@@ -18,6 +18,14 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import GalleryElement from './components/GalleryElement'
 import ProfilePicture from './statics/images/profile3.jpg'
+import HomeIcon from '@material-ui/icons/Home';
+import ForumIcon from '@material-ui/icons/Forum';
+// import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+import ModeCommentIcon from '@material-ui/icons/ModeComment';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import AppsIcon from '@material-ui/icons/Apps';
+import ScatterPlotIcon from '@material-ui/icons/ScatterPlot';
+import { rgbToHex } from '@material-ui/core';
 // import Slide from "./components/Slide";
 // import ArrowForward from '@material-ui/icons/ChevronLeft';
 // import ArrowBack from '@material-ui/icons/ChevronRight';
@@ -28,6 +36,7 @@ class App extends React.Component {
     selectedOption: "home",
     menuMode: "menu__dark",
     fontMenuMode: "main_white",
+    mobileMenuVisibility: "hidden",
   }
 
   constructor(props) {
@@ -35,6 +44,7 @@ class App extends React.Component {
     this.handlerClickOnMenuOption = this.handlerClickOnMenuOption.bind(this);
     this.handlerClickOnCVButton = this.handlerClickOnCVButton.bind(this);
     this.handleClickOnContactLink = this.handleClickOnContactLink.bind(this);
+    this.handleToggleMobileMenu = this.handleToggleMobileMenu.bind(this);
   }
 
   componentDidMount() {
@@ -49,7 +59,7 @@ class App extends React.Component {
 
     let scroll = window.scrollY;
 
-    if (scroll > 550) {
+    if (scroll > 630) {
       this.setState({
         menuMode: "menu__light",
         fontMenuMode: "main_black"
@@ -76,6 +86,13 @@ class App extends React.Component {
     window.open(e.target.href);
   }
 
+  handleToggleMobileMenu = e => {
+    // e.preventDefault();
+    var visibility = this.state.mobileMenuVisibility === "hidden" ? "visible" : "hidden";
+    this.setState({mobileMenuVisibility: visibility})
+  }
+
+
   render() {
     return (
 
@@ -86,10 +103,22 @@ class App extends React.Component {
           selectedOption={this.state.selectedOption}
           menuMode={this.state.menuMode}
           fontMenuMode={this.state.fontMenuMode}
+          clickOnMobileMenuButton={this.handleToggleMobileMenu}
         />
 
         <Section id="Home">
           <div className="home__cover_page">
+
+            <div className={`${this.state.menuMode} menu__mobile_options`} style={{visibility: this.state.mobileMenuVisibility}} >
+              <a href="#Home" className={`${this.state.fontMenuMode} menu__mobile_option`}
+                onClick={this.handleToggleMobileMenu}><HomeIcon />Home</a>
+              <a href="#About" className={`${this.state.fontMenuMode} menu__mobile_option`}
+                onClick={this.handleToggleMobileMenu}><ScatterPlotIcon />About</a>
+              <a href="#Projects" className={`${this.state.fontMenuMode} menu__mobile_option`}
+                onClick={this.handleToggleMobileMenu}><DashboardIcon />Projects</a>
+              <a href="#Contact" className={`${this.state.fontMenuMode} menu__mobile_option`}
+                onClick={this.handleToggleMobileMenu}><ModeCommentIcon />Contact</a>
+            </div> 
 
             <div id="home__mid_div">
               <span className="home__main_title main_white">
@@ -108,12 +137,12 @@ class App extends React.Component {
           </div>
         </Section>
         <Section id="About">
-          <div className="about__info">
+          <div className="about__info about_box">
 
             <div className="about__extract_box">
 
               <p className="about__extract text">
-                <span className="section_title">About <span className="main_red">Me</span></span>
+                <span className="about_title">About <span className="main_red">Me</span></span>
                 <br />
                 <span className="about__catching_Line">I’m a Full Stack Developer.
                 I have more than 3 years of experience working on IT projects.</span> <br />
@@ -125,62 +154,65 @@ class App extends React.Component {
             </div>
 
           </div>
-          <div className="about__section_box about__edu">
+          <div className="about__edu about_box">
 
-            <span className="about__mini_section_title">Education</span>
+            <span className="about__edu_title">Education</span>
 
             <div className="about__edu_box_info">
 
               <div>
                 <p className="main_text"><span className="main_red">CETI</span><span> - Software Developer
                                     Engineer </span></p>
-                <p><span className="about__sec_text">2016 - <span className="about__deco_text">GDL, Jal Mexico</span></span></p>
+                <p><span className="about__edu_text">2016 - <span className="about__edu_deco_text">GDL, Jal Mexico</span></span></p>
               </div>
 
               <div>
                 <p className="main_text"><span className="main_red">CETI</span><span> - Computer Technologist
                                 </span></p>
-                <p><span className="about__sec_text">2012 - <span className="about__deco_text">GDL, Jal Mexico</span></span></p>
+                <p><span className="about__edu_text">2012 - <span className="about__edu_deco_text">GDL, Jal Mexico</span></span></p>
               </div>
 
               <div>
                 <p className="main_text"><span><span className="main_red">CEC</span> - English Student </span></p>
-                <p><span className="about__sec_text">2020 - <span className="about__deco_text">Cork, Ireland</span></span></p>
+                <p><span className="about__edu_text">2020 - <span className="about__edu_deco_text">Cork, Ireland</span></span></p>
               </div>
 
             </div>
 
           </div>
-          <div className="about__section_box about__skills">
+          <div className="about__skills about_box">
 
-            <div className="about__skills_box_info about__mid_tittle">
+            <div className="about__skills_title">
               <span className="about__mid_section_title">What can I <span className="main_red">do?</span></span>
             </div>
 
-            <div className="about__skills_box_info">
-              <div className="about__skill_icon_box about__icons">
-                <CodeIcon /><span className="text">Backend</span>
-              </div>
-              <div className="about__skill_icon_box about__icons">
-                <StorageIcon /><span className="text"> Databases</span>
-              </div>
-              <div className="about__skill_icon_box about__icons">
-                <ImportantDevicesIcon /><span className="text"> Web API's</span>
-              </div>
-            </div>
+            <div className="about__mobile_skills_box">
 
-            <div className="about__skills_box_info ">
-              <div className="about__skill_icon_box about__icons">
-                <WebIcon /><span className="main_white text"> Frontend</span>
+              <div className="about__skills_box_info">
+                <div className="about__skill_icon_box about__icons">
+                  <CodeIcon /><span className="text">Backend</span>
+                </div>
+                <div className="about__skill_icon_box about__icons">
+                  <StorageIcon /><span className="text"> Databases</span>
+                </div>
+                <div className="about__skill_icon_box about__icons">
+                  <ImportantDevicesIcon /><span className="text"> Web API's</span>
+                </div>
               </div>
-              <div className="about__skill_icon_box about__icons">
-                <PhoneAndroidIcon /><span className="text"> Mobile Apps</span>
-              </div>
-              <div className="about__skill_icon_box about__icons">
-                <CloudIcon /><span className="text"> SaaS</span>
-              </div>
-            </div>
 
+              <div className="about__skills_box_info ">
+                <div className="about__skill_icon_box about__icons">
+                  <WebIcon /><span className="main_white text"> Frontend</span>
+                </div>
+                <div className="about__skill_icon_box about__icons">
+                  <PhoneAndroidIcon /><span className="text"> Mobile Apps</span>
+                </div>
+                <div className="about__skill_icon_box about__icons">
+                  <CloudIcon /><span className="text"> SaaS</span>
+                </div>
+              </div>
+
+            </div>
           </div>
         </Section>
         <Section id="Projects">
@@ -215,20 +247,22 @@ class App extends React.Component {
         </Section>
         <Section id="Contact">
 
-          <div className="contact__box banner">
+          <div className="contact__banner">
+
             <div className="contact__profile_pic_box">
               <img src={ProfilePicture} alt="profile pic" className="contact__profile_picture" />
             </div>
             <span className="contact__msg">Get in touch</span>
             <span className="contact__msg_2">I want to hear from you</span>
+
           </div>
-          <div className="contact__box">
+          <div className="contact__info">
 
             <div className="contact__info_box">
-              <span className="contact__info"><MailIcon /> |nancy.bsun@outlook </span>
-              <span className="contact__info"><LinkedInIcon /> | <a href="http://www.linkedin.com/in/nancy-bsun" onClick={this.handleClickOnContactLink}>  Nancy Bernal</a></span>
-              <span className="contact__info"><GitHubIcon /> | <a href="https://github.com/nyx-6" onClick={this.handleClickOnContactLink}>  nyx-6</a></span>
-              <span className="contact__info"><TwitterIcon /> | <a href="https://twitter.com/_nyx6_" onClick={this.handleClickOnContactLink}>  @_nyx6_</a></span>
+              <span className="contact__info_text"><MailIcon/> |nancy.bsun@outlook </span>
+              <span className="contact__info_text"><a href="http://www.linkedin.com/in/nancy-bsun" onClick={this.handleClickOnContactLink}><LinkedInIcon/> |   Nancy Bernal</a></span>
+              <span className="contact__info_text"><a href="https://github.com/nyx-6" onClick={this.handleClickOnContactLink}><GitHubIcon/> |  nyx-6</a></span>
+              <span className="contact__info_text"><a href="https://twitter.com/_nyx6_" onClick={this.handleClickOnContactLink}><TwitterIcon/> |  @_nyx6_</a></span>
             </div>
 
             <div className="contact__button_box">

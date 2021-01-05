@@ -1,15 +1,13 @@
 #Contact {
-    color: #6b6e6e;
+    color: #2b2b33;
     display: flex;
     flex-direction: column;
 }
 
-.contact__box {
-    height: 55%;
-    width: 100%;
-}
 
-.banner {
+.contact__banner {
+    height: 50%;
+    width: 100%;  
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -17,6 +15,13 @@
     background-image: linear-gradient(to left, rgba(149, 47, 120, 0.6), 
     rgba(77, 89, 153, 0.6)), url('../statics/images/banner.jpg');
     background-size: cover;
+}
+
+.contact__info{
+    display: flex;
+    flex-direction: column;
+    height: 50%;  
+    width: 100%;  
 }
 
 .contact__msg {
@@ -30,22 +35,25 @@
     font-weight: 300;
     color: #ffffff;
 }
-
+/* nnn                                   */
 .contact__info_box {
-    height: 50%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    height: 50%;
 }
 
-.contact__info {
+.contact__info_text {
+    color: #6b6e6e;
     display: flex;
     align-items: center;
     font-size: 18px;
 }
 
 .contact__info a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #6b6e6e;
 }
@@ -78,10 +86,8 @@
 
 .contact__profile_pic_box {
     width: 100%;
-    /* height: 200px; */
     display: flex;
     justify-content: center;
-
 }
 
 .contact__profile_picture {
@@ -99,39 +105,36 @@
 @media screen and (max-width: 700px) {
 
     .contact__box {
-        height: 40%;
+        height: 60%;
         width: 100%;
     }
 
-    .banner {
-        background-size:auto;
-        background-repeat: no-repeat;
-    }
-    
     .contact__info_box {
         height: 60%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-top: 2em;
-
     }
 
-    .contact__info {
-  
+    .contact__info_text {
         display: flex;
         align-items: center;
         font-size: 18px;
         margin-left: 30px;
+        color: #2b2b33;
     }
+    .contact__info a {
+        color: #2b2b33;
+    }
+    
 
     .contact__button_box {
-        height: 200px;
+        height: 40%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+   
     .contact__msg {
         font-size: 40px;
         font-weight: 800;

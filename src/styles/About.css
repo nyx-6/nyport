@@ -4,86 +4,21 @@
   flex-direction: column;
 }
 
-.about__mini_section_title {
-  font-size: 28px;
-  font-weight: 400;
-  color: #1B1B1E;
-}
-
-.about__mid_tittle {
-  display: flex;
-  align-items: center;
-}
-.about__info{
-  display: flex;
-  flex-direction: row;
+.about_box {
   padding-left: 60px;
   padding-right: 60px;
   width: 100%;
-  /* justify-content: space-between; */
-}
-.about__section_box {
-  padding-left: 60px;
-  padding-right: 60px;
-  width: 100%;
-  flex: 1 1;
 }
 
-.about__edu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding-right: 60px;
-}
-
-.about__sec_text {
-  font-size: 12px;
-  font-weight: 300;
-}
-
-.about__deco_text {
-  font-style: italic;
-}
-
-.about__edu_box_info {
-  display: flex;
-  justify-content: space-between;
-}
-
-.about__skills {
-  display: flex;
-  color: #ffffff;
-  background-color: #2b2b33;
-  flex-direction: column;
-}
-
-.about__skills_box_info {
+.about__info {
   display: flex;
   flex-direction: row;
-  flex: 1 1;
-}
-
-.about__icons {
-  flex: 1 1;
-}
-
-.about__mid_section_title {
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.about__skill_icon_box {
-  display: flex;
-  align-items: center;
+  height: 34%;
 }
 
 .about__catching_Line {
   font-weight: 400;
 }
-
-/* .about__extract_box{
-
-} */
 
 .about__extract {
   width: 850px;
@@ -93,34 +28,159 @@
   flex-direction: column;
 }
 
+.about_title {
+  font-size: 45px;
+  font-weight: 500;
+  color: #3a3e3e;
+  padding-bottom: 20px;
+  z-index: 10;
+}
+
+.about__skills {
+  display: flex;
+  color: #ffffff;
+  background-color: #2b2b33;
+  flex-direction: column;
+  height: 33%;
+}
+
+.about__skills_title {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  /* background-color: aqua; */
+}
+
+.about__skills_box_info {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1;
+}
+
+.about__mobile_skills_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about__skill_icon_box {
+  display: flex;
+  align-items: center;
+}
+
+.about__edu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 33%;
+}
+
+.about__edu_title {
+  font-size: 28px;
+  font-weight: 400;
+  color: #1B1B1E;
+}
+
+.about__edu_text {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.about__edu_deco_text {
+  font-style: italic;
+}
+
+.about__edu_box_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__icons {
+  flex: 1 1;
+}
+
+.about__mid_section_title {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 950px) {
+  .about__extract {
+    height: 100%;
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 700px) {
-
   .about__edu_box_info {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
   }
-
+  .about__extract.text {
+    font-size: 16px;
+  }
+  .about__extract {
+    height: 100%;
+    width: 100%;
+  }
+  .about_title {
+    font-size: 35px;
+  }
+  .about__mini_section_title {
+    font-size: 25px;
+  }
+  .about__mid_section_title{
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 555px) {
-  
-  .about__extract.text{
-    font-size: 15px;
+  .about_box {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about__extract.text {
+    font-size: 16px;
+  }
+  .about__extract {
+    height: 200px;
+    width: 100%;
+  }
+  .about_title {
+    font-size: 30px;
+  }
+  .about__mini_section_title {
+    font-size: 20px;
+  }
+  .about__edu_box_info {
+    font-size: 16px;
+  }
+  .about__sec_text {
+    font-size: 13px;
+  }
+  .about__catching_Line {
+    margin-bottom: 15px;
   }
   .about__skills_box_info {
-    display: flex;
     flex-direction: column;
-    flex: 1 1;
   }
-  .about__skill_icon_box{
+  .about__skill_icon_box {
     padding-bottom: 20px;
   }
-  .about__skills_box_info.about__mid_tittle{
+  .about__skills_box_info.about__mid_tittle {
     align-items: flex-start;
-    padding-top: 2em;
-    padding-bottom: 2em;
   }
-
+  .about__mid_section_title {
+    font-size: 20px;
+  }
+  .about__edu_title {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 16px;
+  }
+  .about__mobile_skills_box {
+    display: flex;
+    flex-direction: row;
+  }
 }
