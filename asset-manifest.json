@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.92448fe9.chunk.css",
-    "main.js": "/static/js/main.cf0af1e3.chunk.js",
-    "main.js.map": "/static/js/main.cf0af1e3.chunk.js.map",
+    "main.js": "/static/js/main.996ccc96.chunk.js",
+    "main.js.map": "/static/js/main.996ccc96.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.869723cf.js",
     "runtime-main.js.map": "/static/js/runtime-main.869723cf.js.map",
-    "static/js/2.be9ae057.chunk.js": "/static/js/2.be9ae057.chunk.js",
-    "static/js/2.be9ae057.chunk.js.map": "/static/js/2.be9ae057.chunk.js.map",
+    "static/js/2.8338a9eb.chunk.js": "/static/js/2.8338a9eb.chunk.js",
+    "static/js/2.8338a9eb.chunk.js.map": "/static/js/2.8338a9eb.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.92448fe9.chunk.css.map": "/static/css/main.92448fe9.chunk.css.map",
-    "static/js/2.be9ae057.chunk.js.LICENSE.txt": "/static/js/2.be9ae057.chunk.js.LICENSE.txt",
+    "static/js/2.8338a9eb.chunk.js.LICENSE.txt": "/static/js/2.8338a9eb.chunk.js.LICENSE.txt",
     "static/media/Contact.css": "/static/media/banner.dbfdf771.jpg",
     "static/media/Home.css": "/static/media/coverpage.ca87ab22.jpg",
     "static/media/profile3.c7c08aa9.jpg": "/static/media/profile3.c7c08aa9.jpg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.869723cf.js",
-    "static/js/2.be9ae057.chunk.js",
+    "static/js/2.8338a9eb.chunk.js",
     "static/css/main.92448fe9.chunk.css",
-    "static/js/main.cf0af1e3.chunk.js"
+    "static/js/main.996ccc96.chunk.js"
   ]
 }
