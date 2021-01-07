@@ -1,5 +1,5 @@
 #About {
-  padding-top: 60px;
+  padding-top: 15vh;;
   display: flex;
   flex-direction: column;
 }
@@ -32,8 +32,8 @@
   font-size: 45px;
   font-weight: 500;
   color: #3a3e3e;
-  padding-bottom: 20px;
   z-index: 10;
+  /* padding-bottom: 20px; */
 }
 
 .about__skills {
@@ -73,6 +73,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   height: 33%;
+  padding-top: 20px;
 }
 
 .about__edu_title {
@@ -135,6 +136,7 @@
 }
 
 @media screen and (max-width: 555px) {
+
   .about_box {
     padding-left: 30px;
     padding-right: 30px;
@@ -182,5 +184,51 @@
   .about__mobile_skills_box {
     display: flex;
     flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 470px) {
+
+  #About {
+    padding-top: 8vh;;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  #About {
+    padding-top: 7.5vh;;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+
+  #About {
+    padding-top: 8vh;;
+  }
+  .about_title {
+    font-size: 25px;
+  }
+  .about__extract.text {
+    font-size: 13px;
+  }
+  .about__mini_section_title {
+    font-size: 15px;
+  }
+  .about__mid_section_title {
+    font-size: 15px;
+  }
+  .about__edu_title {
+    font-size: 15px;
+  }
+  .text {
+    font-size: 13px;
+  }
+  .about__sec_text {
+    font-size: 10px;
+  }
+  .main_text{
+    font-size: 13px;
   }
 }

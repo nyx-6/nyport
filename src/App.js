@@ -59,7 +59,7 @@ class App extends React.Component {
 
     let scroll = window.scrollY;
 
-    if (scroll > 630) {
+    if (scroll > 565) {
       this.setState({
         menuMode: "menu__light",
         fontMenuMode: "main_black"
@@ -89,7 +89,7 @@ class App extends React.Component {
   handleToggleMobileMenu = e => {
     // e.preventDefault();
     var visibility = this.state.mobileMenuVisibility === "hidden" ? "visible" : "hidden";
-    this.setState({mobileMenuVisibility: visibility})
+    this.setState({ mobileMenuVisibility: visibility })
   }
 
 
@@ -109,7 +109,7 @@ class App extends React.Component {
         <Section id="Home">
           <div className="home__cover_page">
 
-            <div className={`${this.state.menuMode} menu__mobile_options`} style={{visibility: this.state.mobileMenuVisibility}} >
+            <div className={`${this.state.menuMode} menu__mobile_options`} style={{ visibility: this.state.mobileMenuVisibility }} >
               <a href="#Home" className={`${this.state.fontMenuMode} menu__mobile_option`}
                 onClick={this.handleToggleMobileMenu}><HomeIcon />Home</a>
               <a href="#About" className={`${this.state.fontMenuMode} menu__mobile_option`}
@@ -118,7 +118,7 @@ class App extends React.Component {
                 onClick={this.handleToggleMobileMenu}><DashboardIcon />Projects</a>
               <a href="#Contact" className={`${this.state.fontMenuMode} menu__mobile_option`}
                 onClick={this.handleToggleMobileMenu}><ModeCommentIcon />Contact</a>
-            </div> 
+            </div>
 
             <div id="home__mid_div">
               <span className="home__main_title main_white">
@@ -138,21 +138,16 @@ class App extends React.Component {
         </Section>
         <Section id="About">
           <div className="about__info about_box">
-
             <div className="about__extract_box">
-
+              <span className="about_title">About <span className="main_red">Me</span></span>
               <p className="about__extract text">
-                <span className="about_title">About <span className="main_red">Me</span></span>
-                <br />
                 <span className="about__catching_Line">I’m a Full Stack Developer.
-                I have more than 3 years of experience working on IT projects.</span> <br />
+                I have more than 3 years of experience working on IT projects.</span>
                 I like living new experiences even the bad ones I always learn from them.
                 I work hard to achieve my aims and do my best in any activity.
                 I learn fast and I adapt to unexpected situations.
               </p>
-
             </div>
-
           </div>
           <div className="about__edu about_box">
 
@@ -259,10 +254,10 @@ class App extends React.Component {
           <div className="contact__info">
 
             <div className="contact__info_box">
-              <span className="contact__info_text"><MailIcon/> |nancy.bsun@outlook </span>
-              <span className="contact__info_text"><a href="http://www.linkedin.com/in/nancy-bsun" onClick={this.handleClickOnContactLink}><LinkedInIcon/> |   Nancy Bernal</a></span>
-              <span className="contact__info_text"><a href="https://github.com/nyx-6" onClick={this.handleClickOnContactLink}><GitHubIcon/> |  nyx-6</a></span>
-              <span className="contact__info_text"><a href="https://twitter.com/_nyx6_" onClick={this.handleClickOnContactLink}><TwitterIcon/> |  @_nyx6_</a></span>
+              <span className="contact__info_text"><MailIcon /> |nancy.bsun@outlook </span>
+              <span className="contact__info_text"><a href="http://www.linkedin.com/in/nancy-bsun" onClick={this.handleClickOnContactLink}><LinkedInIcon /> |   Nancy Bernal</a></span>
+              <span className="contact__info_text"><a href="https://github.com/nyx-6" onClick={this.handleClickOnContactLink}><GitHubIcon /> |  nyx-6</a></span>
+              <span className="contact__info_text"><a href="https://twitter.com/_nyx6_" onClick={this.handleClickOnContactLink}><TwitterIcon /> |  @_nyx6_</a></span>
             </div>
 
             <div className="contact__button_box">
