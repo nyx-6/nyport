@@ -19,16 +19,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import GalleryElement from './components/GalleryElement'
 import ProfilePicture from './statics/images/profile3.jpg'
 import HomeIcon from '@material-ui/icons/Home';
-import ForumIcon from '@material-ui/icons/Forum';
-// import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import ModeCommentIcon from '@material-ui/icons/ModeComment';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import AppsIcon from '@material-ui/icons/Apps';
 import ScatterPlotIcon from '@material-ui/icons/ScatterPlot';
-import { rgbToHex } from '@material-ui/core';
-// import Slide from "./components/Slide";
-// import ArrowForward from '@material-ui/icons/ChevronLeft';
-// import ArrowBack from '@material-ui/icons/ChevronRight';
+
 
 class App extends React.Component {
 
